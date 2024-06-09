@@ -1,0 +1,438 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Helvetica' , Arial, sans-serif;
+    border:border-box;
+}
+
+body{
+    background-color:black;
+}
+
+html,body{
+    height: 100%;
+    width:100%;
+    padding:0;
+    margin:0;
+    overflow-x:hidden;
+}
+
+.border{
+    border-bottom: 10px solid #232323;
+}
+
+.background{
+    background-image: url(./assests/images/background-img.jpg);
+    background-size: cover;
+    height:700px;
+}
+
+.background-gradient{
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.navbar{
+    height: 100px;
+    padding-top:13px;
+    padding-left:120px;
+    display: flex;
+    justify-content: space-between;
+    padding-right:120px
+  
+}
+.nav-logo svg{
+    height: 50px;
+    width:150px;
+    fill:#E50914;
+    margin:8px 0 0 20px;
+
+}
+
+.nav-buttons{
+    display: flex;
+    margin-top:3px;
+   
+
+}
+
+.lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30px;
+    width:120px;
+    margin-top:5px;
+    border-radius: 4px;
+    padding-left:15px;
+    border:1px solid rgb(90,90,90);
+    
+}
+
+.button-select{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    height: 30px;
+    width: 130px;
+    margin-top:2px;
+    font-size: 1.1rem;
+    border:none;
+}
+
+.lang i{
+    color:white;
+    margin-top:2px;
+    font-size: 0.75rem;
+    margin-right:5px;
+    margin-left:2px
+}
+
+.sign-in{
+    color:white;
+    height:30px;
+    width:80px;
+    background-color: #E50914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:6px;
+    margin-left:23px;
+    border-radius: 4px;
+    font-size:0.95rem;
+}
+
+.title{
+    height:450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    padding-top:20px;
+    
+}
+
+.title h1{
+    font-size:45px;
+    font-weight: 800;
+    margin-bottom:20px;
+}
+
+.para-one{
+    font-size:25px;
+    margin-bottom:25px; 
+}
+
+.para-two{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom:20px; 
+}
+
+.title-search{
+    display: flex;
+    padding-right: 130px;
+    width:100%;
+    justify-content: center;
+    gap:10px;
+    padding-left:135px;
+}
+
+.title-input{
+    height: 60px;
+    width:370px;
+    background-color: rgba(0,0,0,0.6);
+    font-size:1rem;
+    color:white;
+    border-radius: 4px;
+    border:1px solid rgb(90,90,90);
+}
+
+::placeholder{
+    color: #cccccc;
+    padding-left:20px;
+}
+
+.get-started{
+    display: flex;
+    height: 60px;
+    width:200px;
+    background-color: #E50914;
+    justify-content: center;
+    align-items: center;
+    font-size:1.4rem;
+    border-radius: 4px;    
+}
+
+.get-started p{
+    margin-right:10px;
+}
+
+.box-section{
+    
+    color:white;
+    display: flex;
+    align-items: center;
+    padding:0px 100px;
+}
+
+.left-section h1,.right-section h1{
+    font-size: 48px;
+    margin-bottom:20px;
+}
+
+.left-section p,.right-section p{
+    font-size: 27px;
+}
+
+.right-section{
+    position: relative;
+}
+
+.right-section video{
+    position:absolute;
+    left:12%;
+    top:20%;
+    z-index:-1;
+}
+
+.static-left-section{
+    position: relative;
+}
+
+.layout{
+    border:1px solid rgb(90,90,90);
+    border-radius: 4px;;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    width: 330px;
+    background-color:black;
+    position: absolute;
+    bottom:7%;
+    left:23%;
+    justify-content: space-around;
+    padding-right: 10px;
+    
+}
+
+.layout img{
+    height: 100px;
+
+}
+
+.layout p{
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+
+.layout p b{
+    color:white;
+    font-size:1rem;
+}
+
+.layout span{
+    font-size:0.95rem;
+    color:blue;
+}
+
+.layout i{
+    color:white;
+    margin-left: 30px;
+    padding-right:10px;
+}
+
+.static-right-section{
+    position: relative;
+}
+
+.box-three video{
+    width:400px;
+    position: absolute;
+    left:17%;
+    top:7%;
+    z-index: -1;
+}
+
+.doubt-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+
+.doubt-section h1{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.doubt-section p{
+    height:80px;
+    width:80%;
+    background-color:#2D2D2D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+.doubt-section p:hover{
+    background-color: #414141;
+}
+
+.doubt-section p > i{
+    color:#FFFFFF;
+    font-size: 2rem;
+    padding-right: 20px;
+}
+
+.again{
+    height: 200px;
+
+}
+
+.footer-section{
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-section ul{
+    display: flex;
+    flex-direction: column;
+    color:#B3B3B3;
+    gap:30px;
+    font-size: 0.95rem;
+    font-weight: normal;
+
+}
+
+
+@media (max-width:1280px){
+
+    .navbar{
+       display:flex;
+       padding:10px 15px;
+       margin:0;
+       justify-content: space-between;
+    }
+
+}
+
+@media (max-width:960px){
+
+    .nav-logo svg{
+        width:100px;
+        height: 30px;
+    }
+
+    .title h1{
+        font-size:32px;
+        font-weight: 600;
+    }
+
+    .title > p{
+        font-size: 18px;
+    }
+
+    .box-section{
+        flex-wrap:wrap;
+        text-align: center;
+        padding:40px 40px;
+        justify-content: center;
+
+    }
+
+    .box-section img{
+    
+        overflow:hidden;
+    }
+
+    .box-section h1{
+        font-size:32px;
+   
+    }
+
+
+
+    .box-section p{
+        font-size:18px;
+       
+    }
+
+    .box-one{
+        position:relative;
+    }
+    .box-one video{
+        position: absolute;
+        left: 13%;
+        
+    }
+
+    .box-two{
+        padding-top:180px;
+        position: relative;
+       
+        
+    }
+
+    .box-two > .left-section{
+        
+       position: relative;
+
+    }
+
+    .left-section .layout{
+        position: absolute;
+        left:23%
+    }
+
+    .box-two > .right-section{
+        position: absolute;
+        top:13%;
+        left:10%;    
+    }
+
+    .box-three video{
+        left:19%;
+    }
+
+    .box-four p{
+        font-size:16px;
+    }
+
+    .box-four{
+        position: relative;
+        padding-top:200px;
+    }
+
+    .box-four .right-section{
+        position: absolute;
+        top:13%;
+        left:5%;  
+    }
+}
+
+@media (max-width:600px){
+    .title-search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .title-search input{
+        width:85%;
+    }
+
+    .title-search .get-started{
+        width:150px;
+    }
+}
