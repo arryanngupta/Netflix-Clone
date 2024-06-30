@@ -170,11 +170,17 @@ html,body{
 }
 
 .box-section{
-    
     color:white;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     padding:0px 100px;
+}
+
+.left-section{
+    width: 50vw;
+    
+    /* text-align: center; */
 }
 
 .left-section h1,.right-section h1{
@@ -188,75 +194,107 @@ html,body{
 
 .right-section{
     position: relative;
+    width: 50vw;
+    overflow:hidden;
+}
+
+.right-section img{
+    width:100%;
+    overflow: hidden;
 }
 
 .right-section video{
+    width:100%;
     position:absolute;
     left:12%;
     top:20%;
     z-index:-1;
+    overflow: hidden;
 }
 
 .static-left-section{
     position: relative;
+    width: 50vw;
 }
 
 .layout{
     border:1px solid rgb(90,90,90);
-    border-radius: 4px;;
+    border-radius: 4px;
     display: flex;
     align-items: center;
-    height: 130px;
-    width: 330px;
+    height:25%;
+    width: 50%;
     background-color:black;
     position: absolute;
     bottom:7%;
     left:23%;
     justify-content: space-around;
-    padding-right: 10px;
+    padding:3px 10px 3px 2px;
     
 }
 
 .layout img{
-    height: 100px;
+    height: 100%;
 
 }
 
 .layout p{
     display: flex;
     flex-direction: column;
-    padding-right: 30px;
 }
 
 .layout p b{
     color:white;
-    font-size:1rem;
+    font-size:0.8rem;
 }
 
 .layout span{
-    font-size:0.95rem;
+    font-size:0.75rem;
     color:blue;
 }
 
 .layout i{
     color:white;
-    margin-left: 30px;
-    padding-right:10px;
+    margin-right:2px;
 }
 
-.static-right-section{
-    position: relative;
+.right-section-three{
+    width:50vw;
+    overflow: hidden;
+
 }
 
-.box-three video{
-    width:400px;
+.right-section-three img{
+    width:100%;
+    overflow: hidden;
+}
+
+.right-section-three video{
+    width: 61%;
+    object-fit: contain;
     position: absolute;
-    left:17%;
-    top:7%;
-    z-index: -1;
+    left:19%;
+    top: 9%;
+    overflow: hidden;
+    
+}
+
+.box-four{
+    display: flex;
+    gap:20px;
+}
+
+.static-left-section{
+    width:50vw;
+    margin-bottom: 30px;
+}
+
+.static-left-section img{
+    width:100%;
 }
 
 .doubt-section{
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,6 +303,7 @@ html,body{
 }
 
 .doubt-section h1{
+    text-align: center;
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 10px;
@@ -280,6 +319,30 @@ html,body{
     font-size: 1.5rem;
     padding-left: 20px;
 }
+
+.doubt-section .trans-para{
+    font-size: 1.4rem;
+    color:#CCCCCC;
+    font-weight: lighter;
+    height: 0;
+    overflow: hidden;
+    transition: height ease 10s;
+    display: none;
+    padding:10px 10px;  
+} 
+
+.trans-para.active{
+    height:auto;
+    display: block;
+}
+
+
+/* .doubt-section:hover .trans-para{
+    visibility: visible;
+    transform: translateY(10px);
+} */
+
+
 
 .doubt-section p:hover{
     background-color: #414141;
@@ -299,7 +362,7 @@ html,body{
 .footer-section{
     height:400px;
     display: flex;
-    justify-content: center;
+    gap:10px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -311,6 +374,7 @@ html,body{
     gap:30px;
     font-size: 0.95rem;
     font-weight: normal;
+    padding:10px;
 
 }
 
@@ -325,6 +389,18 @@ html,body{
     }
 
 }
+
+@media (max-width:1250px){
+    .left-section h1,.right-section h1{
+        font-size: 2.3rem;
+    }
+
+    .left-section p,.right-section p{
+        font-size: 1rem;
+    }
+}
+
+
 
 @media (max-width:960px){
 
@@ -345,10 +421,12 @@ html,body{
     .box-section{
         flex-wrap:wrap;
         text-align: center;
-        padding:40px 40px;
+        padding:20px;
         justify-content: center;
 
     }
+
+
 
     .box-section img{
     
@@ -377,27 +455,8 @@ html,body{
     }
 
     .box-two{
-        padding-top:180px;
-        position: relative;
-       
-        
-    }
-
-    .box-two > .left-section{
-        
-       position: relative;
-
-    }
-
-    .left-section .layout{
-        position: absolute;
-        left:23%
-    }
-
-    .box-two > .right-section{
-        position: absolute;
-        top:13%;
-        left:10%;    
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .box-three video{
@@ -405,27 +464,85 @@ html,body{
     }
 
     .box-four p{
-        font-size:16px;
+        font: size 1em;
     }
 
     .box-four{
-        position: relative;
-        padding-top:200px;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
-    .box-four .right-section{
-        position: absolute;
-        top:13%;
-        left:5%;  
+    .left-section-one, .left-section-three{
+        width: 100vw;
+    }
+
+    .right-section-two,.right-section-four{
+        width:92vw;
+    }
+
+
+}
+
+@media (max-width:750px){
+    .doubt-section h1{
+        font-size: 2rem;
+        margin:10px 5px;
+    }
+
+    .doubt-section p{
+        height: 20px;
+        font-size: 0.6rem;
+        padding-left: 10px;
+    }
+
+    .doubt-section p > i{
+        font-size: 0.5rem;
     }
 }
 
+
 @media (max-width:600px){
+
+    .navbar{
+        padding:20px 10px;
+    }
+
+    .nav-buttons{
+        gap:10px;
+    }
+
+    .nav-buttons .lang{
+        
+        max-width:65px;
+        padding-right: 20px;
+        
+    }
+
+    .lang i {
+        margin-left:13px ;
+    }
+
+    .sign-in{
+        height: 28px;
+        max-width:60px;
+        margin-left:0;
+        margin-right:3px;
+
+    }
+
+    .title{
+        margin:10px 15px;
+        text-align: center;
+    }
+
+    .title h1{
+        font-size: 25px;
+    }
+
     .title-search{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
 
     .title-search input{
@@ -433,6 +550,134 @@ html,body{
     }
 
     .title-search .get-started{
-        width:150px;
+        font-size: 15px;
+        height:40px;
+        max-width:130px;
+    }
+}
+
+@media(max-width:500px){
+
+    .footer-section{
+        gap:3px;
+    }
+    .footer-section ul{
+        font-size: 0.8rem;
+        gap:7px;
+    }
+
+    .footer-section ul p{
+        margin-top:5px;
+    }
+
+    .lang-again{
+        width:80px;
+    }
+
+    .lang-again i{
+        margin-left:3px;
+    }
+
+    .lang-again select{
+        font-size:0.6rem;
+        margin-right: 9px;
+    }
+}
+
+@media (max-width:425px){
+    .left-section h1,.right-section h1{
+        font-size: 1.6rem;
+        font-weight: 550;
+    }
+
+    .left-section p,.right-section p{
+        font-size: 1.3rem;
+        font-weight: lighter;
+    }
+
+    .footer-section ul{
+        font-size: 0.4rem;
+    }
+}
+
+
+
+@media (max-width:375px){
+    .navbar{
+        padding:15px 7px;
+        align-items: center;
+        height: 30px;
+    }
+
+    .nav-logo svg{
+        margin:0 5px;
+        max-width:85px;
+    
+    }
+
+    .nav-buttons{
+        margin:0;
+        align-items: center;
+        height: 25px;
+        padding:0 5px;
+        display: flex;
+        gap:5px;
+    }
+
+    .nav-buttons .lang{
+        padding:0 8px;
+       
+    }
+
+
+    .lang{
+        margin:0;
+        padding: 0;
+        height:30px;
+    }
+
+    .lang i{
+        padding:0;
+        margin:0 3px;
+
+    }
+
+    .lang select{
+       
+        font-size:0.8rem;
+        margin:0;
+        padding:0;
+
+    }
+
+    .sign-in{
+        margin:0;
+        font-size: 0.8rem;
+        max-width: 50px;
+        height: 30px;
+    }
+
+    .title{
+        margin:10px 5px;
+    }
+
+    .box-section{
+        padding:10px;
+    }
+}
+
+@media (max-width:325px){
+    .navbar{
+        padding:10px 0;
+    }
+
+    .left-section h1,.right-section h1{
+        font-size: 1.2rem;
+        font-weight: 550;
+    }
+
+    .left-section p,.right-section p{
+        font-size: 0.9rem;
+        font-weight: lighter;
     }
 }
